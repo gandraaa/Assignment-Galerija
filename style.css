@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color:#363636;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 26px;
+}
+
+#wrapper {
+    margin: 100px auto;
+    padding: 0 10px;
+}
+
+#wrapper > p {
+    margin: 30px 0 0;
+}
+
+h1, #tiles {
+    text-align: center;
+}
+
+#tiles {
+    margin: 0 auto;
+    clear: both;
+}
+
+.tile {
+    width: 190px;
+    border: 1px solid #f1f1f1;
+    margin: 0 auto 15px;
+    box-shadow: 4px 4px 8px #efefef;
+    border-radius: 17px;
+    overflow: hidden;
+}
+
+.thumb {
+    height: 120px;
+    background: rgba(74, 138, 255, 0.9);
+    overflow: hidden;
+}
+
+.thumb a {
+    display: inline-block;
+    background: url(placeholder-image.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: 12px 12px;
+    overflow: hidden;
+    height: 150px;
+    width: 190px;
+}
+
+.tile-text {
+    margin: 8px 0px;
+}
+
+.thumb:hover {
+    background: rgba(59, 98, 170, 0.9);
+}
+
+.thumb:active {
+    background: rgba(48, 75, 124, 0.9);
+}
+
+@media screen and (min-width:415px) {
+    h1 {
+        float: left;
+        margin: 0 0 20px 20px;
+    }
+
+    #tiles {
+        display: grid;
+        clear: both;
+    }
+}
+
+@media screen and (min-width: 415px) and (max-width: 768px) {
+    #tiles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #wrapper {
+        max-width: 435px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #tiles {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #wrapper {
+        max-width: 789px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    #tiles {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    #wrapper {
+        max-width: 1045px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
